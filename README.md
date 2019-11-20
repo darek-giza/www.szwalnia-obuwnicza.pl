@@ -1,0 +1,1 @@
+# www.szwalnia-obuwnicza.pl
