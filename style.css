@@ -1,0 +1,231 @@
+@font-face {
+    font-family: Futuris Cyrillic;
+    src: url(assets/futuris-cyrillic.ttf);
+    src: url(assets/futuris-cyrillic.woff);
+}
+
+@font-face {
+    font-family: Roboto Thin;
+    src: url(assets/roboto-thin.ttf);
+    src: url(assets/roboto-thin.woff);
+}
+
+* {
+    font-family: 'Roboto Thin', sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    background: #f7f7f7;
+    overflow: auto;
+    scroll-behavior: smooth;
+    /*scroll-snap-type: y mandatory;*/
+}
+main > * {
+    /*scroll-snap-align: center;*/
+}
+
+h1 {
+    text-align: center;
+    line-height: 120px;
+    font-size: 40px;
+    color: #0091EA;
+}
+h1, h2 {
+    font-family: 'Roboto Thin', arial;
+}
+.banner {
+    background-size: 100vw auto;
+    background-position: center;
+    height: 400px;
+}
+.banner-2 {
+    background-image: url(assets/d1.jpg);
+}
+.banner-3 {
+    background-image: url(assets/bg2.png);
+    opacity: 0.8;
+}
+.intro-section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.headline {
+    font-weight: 100;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.headline-primary {
+    font-size: 70px;
+    margin: 0;
+}
+.headline-secondary {
+    font-size: 40px;
+    letter-spacing: 13px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.headline-primary, .headline-secondary {
+    -webkit-text-fill-color: #0091EA;
+    -webkit-background-clip: text;
+}
+.headline-primary, .headline-secondary, .intro-section {
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.0)), url(assets/but9.jpg);
+    background-size: 100vw auto;
+    background-position: center;
+}
+@media (max-width: 1200px) {
+    .headline-primary, .headline-secondary, .intro-section {
+        background-size: auto 100vh;
+    }
+}
+
+nav {
+    font-weight: bold;
+    width: 100vw;
+    font-size: 30px;
+    background: white;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+nav ul li a {
+    color: #0091EA;
+    margin: 0 70px;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-align: center;
+}
+
+article {
+    width: 1000px; /* add media queries */
+    margin: 60px auto;
+}
+
+p {
+    font-family: 'Quattrocento', serif;
+    line-height: 25px;
+    text-align: justify;
+    color: #3f3f3f;
+}
+
+footer {
+    align-items: center;
+    justify-content: center;
+    background-color: #3f3f3f;
+    color: #fff;
+    display: flex;
+    padding: 60px 20px;
+    line-height: 30px;
+    flex-direction: column;
+}
+
+footer > div {
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+}
+.fas {
+    color: #61bbcc;
+    width: 38px;
+}
+
+#map {
+    height: 400px;
+    width: 600px;
+    background: #f7f7f7;
+    color: #3f3f3f;
+}
+
+
+
+.services-list {
+    padding: 50px 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-ct {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    row-gap: 40px;
+    column-gap: 40px;
+    margin: 40px 0;
+    position: relative;
+}
+
+.box {
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    background-size: auto 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: .3s all;
+}
+.box:hover {
+    align-items: center;
+}
+
+.box:hover span {
+    font-weight: bold;
+    line-height: 60px;
+    background: rgba(55, 59, 58, 0.7);
+}
+
+.box span {
+    transition: inherit;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    background: rgba(55, 59, 58, 0.6);
+    line-height: 50px;
+    z-index: 1;
+}
+.box-container {
+    height: 200px;
+    transition: .5s all;
+    overflow: hidden;
+}
+
+.box-container:hover .box-description {
+    display: block;
+}
+.box-description {
+    width: 250px;
+    display: none;
+    position: absolute;
+}
+
+.box:hover img {
+    transform: scale(1.2);
+}
+
+.box img {
+    transition: inherit;
+    height: 100%;
+    width: auto;
+}
